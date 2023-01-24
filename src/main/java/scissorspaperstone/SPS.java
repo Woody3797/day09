@@ -12,8 +12,9 @@ public class SPS {
     public String checkWinner(Integer playerChoice, Integer computerChoice) {
         playerChoice = playerChoice - 1;
         String winner = "";
+
         if (playerChoice == computerChoice) {
-            return "";
+            return "draw, try again";
         }
 
         switch (playerChoice) {
