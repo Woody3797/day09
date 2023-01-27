@@ -6,7 +6,7 @@ public class App {
     
     public static void main(String[] args) {
         
-        String[] choice = {"scissors", "paper", "stone"};
+        // String[] choice = {"scissors", "paper", "stone"};
 
         Scanner scanner = new Scanner(System.in);
         SPS sps = new SPS();
