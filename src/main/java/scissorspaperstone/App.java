@@ -10,11 +10,11 @@ public class App {
 
         Scanner scanner = new Scanner(System.in);
         SPS sps = new SPS();
-        int computerChoice = sps.generateComputerChoice();
         boolean win = false;
         String winner = "";
 
         while (!win) {
+            int computerChoice = sps.generateComputerChoice();
             System.out.println("enter 1 for scissors, 2 for paper, 3 for stone");
             int playerChoice = scanner.nextInt();
 
@@ -23,13 +23,12 @@ public class App {
                 continue;
             } else {
                 winner = sps.checkWinner(playerChoice, computerChoice);
-            }
-
-            if (!winner.equals("")) {
-                System.out.println(winner + " has won!");
-                win = true;
-            } else {
-                System.out.println("draw");
+                if (winner.contains("draw")) {
+                    System.out.println(winner);
+                } else {
+                    System.out.println(winner + " wins!");
+                    win = true;
+                }
             }
         }
         scanner.close();
